@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+color: #243247;
+background-color: #9effbe
+}
+
+header {
+background-color: #ffaec9;
+padding: 16px 6%;
+outline: auto;
+outline-color: purple;
+}
+
+.container-fluid {
+  background-color: #ffaec9;
+}
+
+.row {
+  gap: 20px;
+}
+
+nav {
+    display: flex;
+flex-wrap: wrap;
+gap: 20px;
+
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+
+    width: min(100% - 32px, 1000px);
+    margin: 32px auto;
+}
+
+section {
+
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 28px;
+    border-radius: 12px;
+}
+
+h1, h2 {
+line-height: 1.2;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: inherit;
+  background-color: #28ca07;
+}
+
+.card {
+  border: 1px solid #188d00;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 155, 13, 0.336);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.product:hover {
+
+  transform: translateY(-20px) rotate(2deg);
+  
+  box-shadow: 0 10px 20px rgb(172, 255, 124); 
+}
+
+
+
+.product-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  
+  animation-name: flotarImagen;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  
+  
+  animation-fill-mode: forwards; 
+}
+
+
+@keyframes flotarImagen {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+button {
+  background-color: rgb(255, 252, 74); 
+  color: #000000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(179, 255, 185);
+  color: #97039c;
+}
