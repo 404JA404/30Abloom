@@ -11,7 +11,7 @@ margin: 0;
 font-family: Arial, sans-serif;
 line-height: 1.6;
 color: #243247;
-background-color: #9effbe
+ background: conic-gradient(from 0deg, rgb(96, 255, 149), rgb(0, 255, 106), rgb(255, 111, 212), rgb(255, 238, 0), rgb(171, 255, 150));
 }
 
 header {
@@ -68,6 +68,84 @@ line-height: 1.2;
   background-color: #28ca07;
 }
 
+.card-flower {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: inherit;
+  background-color: #d7ee0d;
+}
+
+.flower {
+  border: 1px solid #d3ff32;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(206, 177, 13);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-plant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: inherit;
+  background-color: #02b99a;
+}
+
+.plant {
+  border: 1px solid #01977e;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(31, 212, 113);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-bonsai {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: inherit;
+  background-color: #ff9cd6;
+}
+
+.bonsai {
+  border: 1px solid #ffb1eb;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 176, 242);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.card-champ {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: inherit;
+  background-color: #ff2424;
+}
+
+.champ {
+  border: 1px solid #ff0909;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 135, 135);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .card {
   border: 1px solid #188d00;
   border-radius: 1rem;
@@ -128,6 +206,23 @@ button {
 }
 
 button:hover {
+  background-color: rgb(179, 255, 185);
+  color: #97039c;
+}
+
+#Info {
+    background-color: rgb(255, 252, 74); 
+  color: #000000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+#Info:hover {
   background-color: rgb(179, 255, 185);
   color: #97039c;
 }
