@@ -11,13 +11,15 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
     crossorigin="anonymous"></script>
+  <!-- defer: el script se ejecuta cuando el HTML ya está cargado -->
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <header>
     <nav class="navbar sm:navbar-expand bg-1 fg-2">
       <div class="container-fluid">
-        <img src="img/abloom1.png" alt="Logo" width="200" height="90" class="d-inline-block align-text-top"></img>
+        <img src="img/abloom1.png" alt="Logo" width="200" height="90" class="d-inline-block align-text-top">
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" aria-hidden="true"></span>
@@ -52,185 +54,179 @@
         </dialog>
       </div>
     </nav>
+    <!-- contenedor donde se pinta la lista de favoritos -->
+    <div id="favoritos"></div>
   </header>
+
   <main id="cacturn">
     <div class="container text-center">
       <div class="row">
-        <section class="card-container" style="max-width: 320px">
+        <section class="card-container" data-id="cactus-barril" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/c/c0/Round_Cactus_PG_Model.png" class="product-image" alt="Producto">
           <div class="card product">
             <h4 class="card-title">Cactus Barril</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://en.wikipedia.org/wiki/Barrel_cactus">informacion</a>
+            <p class="card-text">Cactus esférico de regiones áridas, famoso por su capacidad para almacenar agua en su interior y sus gruesas espinas protectoras.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://en.wikipedia.org/wiki/Barrel_cactus">informacion</a>
           </div>
         </section>
-        <section class="card-container" style="max-width: 320px">
+        <section class="card-container" data-id="cactus-plano" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/1/14/Cactus_WW_Model.png" class="product-image" alt="Producto">
           <div class="card product">
             <h4 class="card-title">Cactus Plano</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Opuntia_ficus-indica">informacion</a>
+            <p class="card-text">Conocido como nopal, posee pencas llanas y ovaladas con espinas, además de dar deliciosas tunas en climas secos.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Opuntia_ficus-indica">informacion</a>
           </div>
         </section>
-        <section class="card-container" style="max-width: 320px" id="cactus">
+        <section class="card-container" data-id="mini-cactus-alto" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/3/3f/Tall_Mini_Cactus_NL_Model.png" class="product-image" alt="Producto">
           <div class="card product">
             <h4 class="card-title">Mini Cactus Alto</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Cactaceae">informacion</a>
+            <p class="card-text">Cactus de crecimiento vertical en formato compacto, perfecto para decorar escritorios y espacios reducidos.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Cactaceae">informacion</a>
           </div>
         </section>
       </div>
     </div>
   </main>
-
-
-
 
   <main id="flowa">
     <div class="container text-center">
       <div class="row">
-        <section class="card-flower" style="max-width: 320px">
+        <section class="card-flower" data-id="girasol" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/2/25/Sunflower_PG_Model.png" class="product-image" alt="Producto">
           <div class="flower product">
             <h4 class="card-title">Girasol</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Helianthus_annuus">informacion</a>
+            <p class="card-text">Planta de gran tamaño con deslumbrantes pétalos amarillos que siguen la trayectoria del sol durante el día.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Helianthus_annuus">informacion</a>
           </div>
         </section>
-        <section class="card-flower" style="max-width: 320px">
+        <section class="card-flower" data-id="narciso" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/d/db/Daffodil_WW_Model.png" class="product-image" alt="Producto">
           <div class="flower product">
             <h4 class="card-title">Narciso</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Narcissus">informacion</a>
+            <p class="card-text">Flor primaveral con una distintiva trompeta central y pétalos delicados caracterizados por su dulce aroma.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Narcissus">informacion</a>
           </div>
         </section>
-        <section class="card-flower" style="max-width: 320px">
+        <section class="card-flower" data-id="gerbera" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/7/71/Gerbera_WW_Model.png" class="product-image" alt="Producto">
           <div class="flower product">
             <h4 class="card-title">Gerbera</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Gerbera">informacion</a>
+            <p class="card-text">Flor ornamental muy apreciada por sus radiantes colores y simetría en arreglos de jardinería.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Gerbera">informacion</a>
           </div>
         </section>
       </div>
     </div>
   </main>
 
-
-
-
   <main id="planta">
     <div class="container text-center">
       <div class="row">
-        <section class="card-plant" style="max-width: 320px">
+        <section class="card-plant" data-id="lengua-suegra" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/e/e4/Snake_Plant_CF_Model.png" class="product-image" alt="Producto">
           <div class="plant product">
             <h4 class="card-title">Lengua de suegra</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Helianthus_annuus">informacion</a>
+            <p class="card-text">Planta de interior muy resistente de hojas erguidas y alargadas que ayuda a purificar el aire del hogar.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Sansevieria_trifasciata">informacion</a>
           </div>
         </section>
-        <section class="card-plant" style="max-width: 320px">
+        <section class="card-plant" data-id="dracaena" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/4/46/Corn_Plant_CF_Model.png" class="product-image" alt="Producto">
           <div class="plant product">
-            <h4 class="card-title">Dracaena </h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Narcissus">informacion</a>
+            <h4 class="card-title">Dracaena</h4>
+            <p class="card-text">Planta tropical de follaje vistoso y tallo leñoso que aporta verde y elegancia a cualquier habitación.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Dracaena">informacion</a>
           </div>
         </section>
-        <section class="card-plant" style="max-width: 320px">
+        <section class="card-plant" data-id="caladium" style="max-width: 320px">
           <img src="https://dodo.ac/np/images/d/df/Caladium_CF_Model.png" class="product-image" alt="Producto">
           <div class="plant product">
             <h4 class="card-title">Caladium</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-              content.</p>
-            <a id="Info" href="https://es.wikipedia.org/wiki/Gerbera">informacion</a>
+            <p class="card-text">Destaca por sus llamativas hojas en forma de corazón con vistosos patrones de colores verde, rosa y blanco.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Caladium">informacion</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <main id="bonsaid">
+    <div class="container text-center">
+      <div class="row">
+        <section class="card-bonsai" data-id="bonsai-pino" style="max-width: 320px">
+          <img src="https://dodo.ac/np/images/0/0d/Pine_Bonsai_NL_Model.png" class="product-image" alt="Producto">
+          <div class="bonsai product">
+            <h4 class="card-title">Bonsai Pino</h4>
+            <p class="card-text">Árbol en miniatura de pino, clásico en la cultura oriental como símbolo de paciencia y longevidad.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Pinus_parviflora">informacion</a>
+          </div>
+        </section>
+        <section class="card-bonsai" data-id="bonsai-sakura" style="max-width: 320px">
+          <img src="https://dodo.ac/np/images/b/bf/Cherry-Blossom_Bonsai_NH_Icon.png" class="product-image"
+            alt="Producto">
+          <div class="bonsai product">
+            <h4 class="card-title">Bonsai de Sakura</h4>
+            <p class="card-text">Pequeño cerezo en miniatura admirado por la delicada floración rosada que anuncia la primavera.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://www.bonsaiurbano.com/bonsai-cerezo-japones-sakura-cuidados-y-mantenimiento/">informacion</a>
+          </div>
+        </section>
+        <section class="card-bonsai" data-id="bonsai-ciruelo" style="max-width: 320px">
+          <img src="https://dodo.ac/np/images/4/49/Plum_Bonsai_NL_Model.png" class="product-image" alt="Producto">
+          <div class="bonsai product">
+            <h4 class="card-title">Bonsai de ciruelo</h4>
+            <p class="card-text">Bonsái apreciado por su tronco esculpido y sus flores aromáticas que brotan a finales del invierno.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Sageretia_thea">informacion</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <main id="moosh">
+    <div class="container text-center">
+      <div class="row">
+        <section class="card-champ" data-id="pholiota" style="max-width: 320px">
+          <img src="https://dodo.ac/np/images/b/b8/Skinny_Mushroom_NL_Model.png" class="product-image" alt="Producto">
+          <div class="champ product">
+            <h4 class="card-title">Pholiota</h4>
+            <p class="card-text">Hongo silvestre de tono amarillento o dorado que suele brotar en racimos sobre troncos de árboles.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://en.wikipedia.org/wiki/Pholiota">informacion</a>
+          </div>
+        </section>
+        <section class="card-champ" data-id="volemus" style="max-width: 320px">
+          <img src="https://dodo.ac/np/images/b/ba/Mush_Parasol_NH_DIY_Icon.png" class="product-image" alt="Producto">
+          <div class="champ product">
+            <h4 class="card-title">Volemus</h4>
+            <p class="card-text">Hongo característico de zonas boscosas con sombrero anaranjado en forma de sombrilla o parasol.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://es.wikipedia.org/wiki/Lactarius_volemus">informacion</a>
+          </div>
+        </section>
+        <section class="card-champ" data-id="amanita" style="max-width: 320px">
+          <img src="https://dodo.ac/np/images/e/e2/Famous_Mushroom_NL_Model.png" class="product-image" alt="Producto">
+          <div class="champ product">
+            <h4 class="card-title">Amanita</h4>
+            <p class="card-text">Icónico hongo de sombrero rojo intenso con manchas blancas, muy célebre en la cultura popular.</p>
+            <a href="#" class="agregar-favoritos">Agregar a favoritos</a>
+            <a class="Info" href="https://en.wikipedia.org/wiki/Amanita">informacion</a>
           </div>
         </section>
       </div>
     </div>
   </main>
 </body>
-
-
-
-<main id="bonsaid">
-  <div class="container text-center">
-    <div class="row">
-      <section class="card-bonsai" style="max-width: 320px">
-        <img src="https://dodo.ac/np/images/0/0d/Pine_Bonsai_NL_Model.png" class="product-image" alt="Producto">
-        <div class="bonsai product">
-          <h4 class="card-title">Bonsai Pino</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-            content.</p>
-          <a id="Info" href="https://es.wikipedia.org/wiki/Helianthus_annuus">informacion</a>
-        </div>
-      </section>
-      <section class="card-bonsai" style="max-width: 320px">
-        <img src="https://dodo.ac/np/images/b/bf/Cherry-Blossom_Bonsai_NH_Icon.png" class="product-image"
-          alt="Producto">
-        <div class="bonsai product">
-          <h4 class="card-title">Bonsai de Sakura </h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-            content.</p>
-          <a id="Info" href="https://es.wikipedia.org/wiki/Narcissus">informacion</a>
-        </div>
-      </section>
-      <section class="card-bonsai" style="max-width: 320px">
-        <img src="https://dodo.ac/np/images/4/49/Plum_Bonsai_NL_Model.png" class="product-image" alt="Producto">
-        <div class="bonsai product">
-          <h4 class="card-title">Bonsai de ciruelo</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-            content.</p>
-          <a id="Info" href="https://es.wikipedia.org/wiki/Gerbera">informacion</a>
-        </div>
-      </section>
-    </div>
-  </div>
-</main>
-
-
-<main id="moosh">
-  <div class="container text-center">
-    <div class="row">
-      <section class="card-champ" style="max-width: 320px">
-        <img src="https://dodo.ac/np/images/b/b8/Skinny_Mushroom_NL_Model.png" class="product-image" alt="Producto">
-        <div class="champ product">
-          <h4 class="card-title">Pholiota </h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-            content.</p>
-          <a id="Info" href="https://es.wikipedia.org/wiki/Helianthus_annuus">informacion</a>
-        </div>
-      </section>
-      <section class="card-champ" style="max-width: 320px">
-        <img src="https://dodo.ac/np/images/b/ba/Mush_Parasol_NH_DIY_Icon.png" class="product-image" alt="Producto">
-        <div class="champ product">
-          <h4 class="card-title">Volemus </h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-            content.</p>
-          <a id="Info" href="https://es.wikipedia.org/wiki/Narcissus">informacion</a>
-        </div>
-      </section>
-      <section class="card-champ" style="max-width: 320px">
-        <img src="https://dodo.ac/np/images/e/e2/Famous_Mushroom_NL_Model.png" class="product-image" alt="Producto">
-        <div class="champ product">
-          <h4 class="card-title">Amanita</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-            content.</p>
-          <a id="Info" href="https://es.wikipedia.org/wiki/Gerbera">informacion</a>
-        </div>
-      </section>
-    </div>
-  </div>
-</main>
 </html>
