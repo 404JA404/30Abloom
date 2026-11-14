@@ -242,7 +242,8 @@ button:hover {
 }
 
 #favoritos {
-  padding: 4px 12px;
+  padding-left: 4px 12px;
+  background-color: rgb(229, 248, 159);
 }
 
 #favoritos ul {
@@ -261,7 +262,7 @@ button:hover {
 }
 
 .agregar-favoritos {
-   background-color: rgb(74, 249, 255);
+   background-color: rgb(46, 235, 178);
   color: #000000;
   border: none;
   padding: 0.5rem 1rem;
@@ -270,4 +271,32 @@ button:hover {
   cursor: pointer;
   margin-top: auto;
   transition: background-color 0.3s ease;
+}
+
+
+/* Botón X para eliminar favoritos */
+.eliminar-favorito {
+  background-color: transparent;
+  color: #e74c3c;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0 5px;
+  line-height: 1;
+  border-radius: 50%;
+}
+
+.eliminar-favorito:hover {
+  background-color: #ffdada;
+  color: #a00000;
+}
+
+/* Alineación de los favoritos */
+#favoritos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
